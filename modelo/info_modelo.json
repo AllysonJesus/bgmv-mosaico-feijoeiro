@@ -1,0 +1,47 @@
+{
+  "arquitetura": "mobilenetv2",
+  "versao_dataset": "v1",
+  "classes": [
+    "mosaico_dourado",
+    "saudavel",
+    "outras_alteracoes"
+  ],
+  "nomes_exibicao": {
+    "mosaico_dourado": "Mosaico viral do feijoeiro (sintomas compatíveis com mosaico dourado)",
+    "saudavel": "Folha saudável",
+    "outras_alteracoes": "Outras alterações (ex.: ferrugem, mancha-angular)"
+  },
+  "tamanho": 224,
+  "confianca_minima": 0.7,
+  "tensorflow": "2.21.0",
+  "keras": "3.15.1",
+  "treino_por_classe": {
+    "mosaico_dourado": 234,
+    "saudavel": 233,
+    "outras_alteracoes": 233
+  },
+  "pesos_de_classe": {
+    "0": 0.9971509971509972,
+    "1": 1.0014306151645207,
+    "2": 1.0014306151645207
+  },
+  "fase1": {
+    "epocas_max": 20,
+    "epocas_executadas": 20,
+    "taxa": 0.001
+  },
+  "fase2": {
+    "epocas_max": 10,
+    "epocas_executadas": 10,
+    "taxa": 1e-05,
+    "camadas_liberadas": 30
+  },
+  "lote": 32,
+  "dropout": 0.3,
+  "paciencia": 4,
+  "semente": 42,
+  "validacao": {
+    "acuracia": 1.0,
+    "perda": 0.004287075251340866
+  }
+}
